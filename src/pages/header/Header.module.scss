@@ -1,0 +1,68 @@
+@import "../../config";
+
+.header {
+  @include displayFlex(space-between, flex-start);
+  @include font($textColor1, 1.5rem, 600);
+
+  padding: 1rem;
+  background-color: $primaryColor;
+  color: $textColor1;
+  position: sticky;
+  top: 0;
+
+  h1 {
+    margin-left: 1rem;
+    font-style: oblique;
+    @include media($sm) {
+      font-size: 2.5rem;
+    }
+    @include media($xs) {
+      font-size: 1.8rem;
+    }
+    a {
+      text-decoration: none;
+      color: $textColor1;
+    }
+    &:hover,
+    &:active {
+      @include animation();
+    }
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    margin-right: 1rem;
+
+    li a {
+      display: flex;
+      text-decoration: none;
+      color: $textColor1;
+      font-size: 1rem;
+      margin: 0.2rem;
+      padding: 0.9rem 2.2rem;
+      line-height: $lh;
+      border-radius: 1rem;
+
+      &:hover,
+      &.active {
+        background-color: #ffffff;
+        color: $textColor2;
+        box-shadow: $bShadowA;
+        letter-spacing: 0.46px;
+      }
+    }
+    @include media($md) {
+      li a {
+        display: none;
+      }
+    }
+  }
+}
+.img {
+  display: none;
+  @include media($md) {
+    display: flex;
+    margin: 1rem;
+    @include hover();
+  }
+}

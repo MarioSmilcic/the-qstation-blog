@@ -1,0 +1,24 @@
+@import "../../config";
+
+.button {
+  @include displayFlex(center, center);
+  @include font($textColor1, 1rem, 600);
+  line-height: 1.625rem;
+  letter-spacing: 0.46px;
+  background-color: $primaryColor;
+  width: 15rem;
+  height: 3.5rem;
+  border-radius: 16px;
+  box-shadow: $bShadowA;
+  border: none;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    color: $textColor2;
+    background-color: #fff;
+    border: 1px solid $primaryColor;
+  }
+  @include media($sm) {
+    font-size: 0.9rem;
+  }
+}

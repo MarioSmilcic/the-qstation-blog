@@ -1,0 +1,7 @@
+@import "../../config";
+
+.pageNotFound {
+  @include font($textColor2, 1.5rem, 600);
+  text-align: center;
+  margin: 4rem;
+}

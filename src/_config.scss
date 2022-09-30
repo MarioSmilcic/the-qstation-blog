@@ -1,0 +1,72 @@
+// $primaryColor: #3faad7;
+$primaryColor: #215e7c;
+$dangerColor: #a50011;
+$textColor1: #fff;
+$textColor2: #000;
+$textColor3: #14142b;
+
+// $borderColor: #14142b;
+$borderColor: #14142b40;
+$modalColor: #f9fafc;
+
+$lh: 1.5rem;
+$bShadowA: 0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+$bShadowB: inset 0px -1px 0px rgba(0, 0, 0, 0.12);
+
+//mixins
+
+@mixin displayFlex($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin font($color, $size, $weight) {
+  font-family: "Poppins", sans-serif;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+@mixin border($color) {
+  border: 1px solid $color;
+  border-radius: 16px;
+}
+
+@mixin hover() {
+  &:active,
+  &:hover {
+    cursor: pointer;
+  }
+}
+@mixin media($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+@mixin mediaMin($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin animation() {
+  animation: wiggle 200ms 3 alternate;
+}
+
+@keyframes wiggle {
+  from {
+    transform: rotateZ(0);
+  }
+
+  to {
+    transform: rotateZ(10deg);
+  }
+}
+//MEDIA SIZES
+
+$xs: 350px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;

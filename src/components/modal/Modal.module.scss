@@ -1,0 +1,48 @@
+@import "../../config";
+
+.modal {
+  @include font($textColor2, 1.5rem, 600);
+  background: $modalColor;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  @include mediaMin($md) {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+
+    li a {
+      display: flex;
+      text-decoration: none;
+      color: $textColor2;
+      font-size: 1rem;
+      margin: 0.2rem;
+      padding: 0.9rem 2.2rem;
+      line-height: $lh;
+      border-radius: 1rem;
+
+      &:hover,
+      &.active {
+        background-color: $primaryColor;
+        color: $textColor1;
+        box-shadow: $bShadowA;
+        letter-spacing: 0.46px;
+      }
+    }
+  }
+  img {
+    width: 1rem;
+    margin: 1.5rem 3rem;
+    align-self: flex-end;
+    &:hover,
+    &:active {
+      cursor: pointer;
+      @include animation();
+    }
+  }
+}

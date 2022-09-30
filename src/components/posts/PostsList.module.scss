@@ -1,0 +1,14 @@
+@import "../../config";
+
+.postsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  @include media($md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media($sm) {
+    grid-template-columns: 1fr;
+  }
+}

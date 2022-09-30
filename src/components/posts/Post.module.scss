@@ -1,0 +1,55 @@
+@import "../../config";
+
+.post {
+  @include border($borderColor);
+  overflow: hidden;
+  overflow-wrap: break-word;
+  margin: 0.5em;
+  padding: 1em;
+
+  p {
+    line-height: $lh;
+    font-size: 1.2rem;
+    margin: 0.5em 0;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  a {
+    line-height: 2.5rem;
+    text-decoration: none;
+    color: $textColor2;
+    margin-right: 0.4rem;
+    background-color: $primaryColor;
+    color: $textColor1;
+    box-shadow: $bShadowA;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.46px;
+
+    &:hover,
+    &.active {
+      @include border($primaryColor);
+      background-color: #ffffff;
+      color: $textColor2;
+      box-shadow: $bShadowA;
+    }
+  }
+
+  .postSummary {
+    font-style: oblique;
+    text-indent: 10%;
+  }
+  .postCredit {
+    font-size: 1rem;
+  }
+}
